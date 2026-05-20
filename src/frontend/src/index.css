@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InstrumentSerif";
+  src: url("/assets/fonts/InstrumentSerif-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Light zinc/slate base */
+    --background: 0.12 0.008 260;
+    --foreground: 0.92 0.008 260;
+    --card: 0.15 0.01 260;
+    --card-foreground: 0.92 0.008 260;
+    --popover: 0.15 0.01 260;
+    --popover-foreground: 0.92 0.008 260;
+    /* Indigo primary — platform identity, always indigo */
+    --primary: 0.52 0.18 265;
+    --primary-foreground: 0.98 0.005 265;
+    --secondary: 0.22 0.015 260;
+    --secondary-foreground: 0.85 0.008 260;
+    --muted: 0.22 0.015 260;
+    --muted-foreground: 0.55 0.008 260;
+    --accent: 0.58 0.16 155;
+    --accent-foreground: 0.12 0.008 155;
+    --destructive: 0.52 0.22 18;
+    --destructive-foreground: 0.98 0.005 18;
+    --border: 0.25 0.015 260;
+    --input: 0.25 0.015 260;
+    --ring: 0.52 0.18 265;
+    /* Charts */
+    --chart-1: 0.52 0.18 265;
+    --chart-2: 0.58 0.16 155;
+    --chart-3: 0.65 0.14 18;
+    --chart-4: 0.6 0.18 40;
+    --chart-5: 0.55 0.16 200;
+    /* Light sidebar */
+    --sidebar: 0.14 0.01 260;
+    --sidebar-foreground: 0.88 0.008 260;
+    --sidebar-primary: 0.52 0.18 265;
+    --sidebar-primary-foreground: 0.98 0.005 265;
+    --sidebar-accent: 0.2 0.015 260;
+    --sidebar-accent-foreground: 0.88 0.008 260;
+    --sidebar-border: 0.28 0.015 260;
+    --sidebar-ring: 0.52 0.18 265;
+    /* Brand vars (updated by AppContext when business switches) */
+    --brand-h: 265;
+    --brand-c: 0.18;
+    --brand-l: 0.52;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "PlusJakartaSans", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Display headings use BricolageGrotesque */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "BricolageGrotesque", system-ui, sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  /* Utility: apply display font to any element */
+  .font-display {
+    font-family: "BricolageGrotesque", system-ui, sans-serif !important;
+  }
+}
+
+@layer utilities {
+  /* Subtle scrollbar style */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.85 0.008 240) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: oklch(0.85 0.008 240);
+    border-radius: 2px;
+  }
+
+  /* Hide scrollbar while preserving scroll */
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "overview": "SP Jewelry is a cinematic luxury jewelry e-commerce storefront with a dramatic dark hero, 6 product categories, full product catalog, and guest checkout powered by Stripe.",
+  "features": [
+    "Cinematic dark hero with jewel-tone accents and fade-in animations",
+    "6 jewelry category showcase (Rings, Necklaces, Bracelets, Earrings, Pendants, Sets)",
+    "Filterable and sortable product catalog with search",
+    "Product detail pages with image zoom and related products",
+    "Shopping cart with quantity controls and totals",
+    "Guest checkout with Stripe payment and order confirmation"
+  ],
+  "category": "e-commerce",
+  "tags": [
+    "jewelry",
+    "e-commerce",
+    "luxury",
+    "cinematic",
+    "storefront",
+    "shop"
+  ],
+  "last_updated": "2026-05-20T06:41:24.469Z"
+}

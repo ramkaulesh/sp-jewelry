@@ -1,0 +1,17 @@
+type Product = 
+ record {
+   category: text;
+   description: text;
+   featured: bool;
+   id: text;
+   imageUrl: text;
+   name: text;
+   price: nat;
+ };
+service : {
+  getProduct: (id: text) -> (opt Product) query;
+  getProducts: () -> (vec Product) query;
+  getStripePublicKey: () -> (text) query;
+  isStripeConfigured: () -> (bool) query;
+  setStripePublicKey: (key: text) -> ();
+}
